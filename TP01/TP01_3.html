@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Form Page</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form method="GET">
+            <fieldset>
+                <legend>Form</legend>
+                <label for="id_name">Name:
+                    <input type="text" name="name" id="id_name" required>
+                </label><br>
+                <label>Age:</label>
+                <input type="radio" name="id_age" id="minor18" value="&lt;18" checked>&lt;18
+                <input type="radio" name="id_age" id="19to35" value="19-35">19-35
+                <input type="radio" name="id_age" id="36to48" value="36-48">36-48
+                <input type="radio" name="id_age" id="plus49" value="&gt;49">&gt;49
+                <br>
+                <label for="id_profession">Profession:
+                    <input type="text" name="profession" id="id_profession" required>
+                </label><br>
+                <label for="id_country">Country:
+                    <select name="country" id="id_country" size="1" required>
+                        <option value="" selected>Choose</option>
+                        <option value="portugal" >Portugal</option>
+                        <option value="poland" >Poland</option>
+                        <option value="peru" >Peru</option>
+                        <option value="Pakistan" >Pakistan</option>
+                    </select>
+                </label><br>
+                <label>Interests:</label>
+                <input type="checkbox" name="id_interests" id="biking" value="biking">Biking
+                <input type="checkbox" name="id_interests" id="surfing" value="surfing">Surfing
+                <input type="checkbox" name="id_interests" id="gaming" value="gaming">Gaming
+                <input type="checkbox" name="id_interests" id="drinking" value="drinking">Drinking
+                <br>
+                <label for="id_discovery">How did you find this site?<br>
+                    <textarea name="discovery" id="id_discovery" cols="30" rows="10"></textarea>
+                </label>
+                <input type="submit" value="Send">
+
+            </fieldset>
+        </form>
+    </body>
+
+</html>
