@@ -23,21 +23,28 @@
         right: 0;
     }
 
-    #menu {
+    #menu .hamburger {
+        box-sizing: border-box;
+        display: block;
         background-color: #2A2F33;
         padding: 1em;
+        width: 100%;
     }
     #menu ul{
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        width: 100%;
-        z-index: 1;
+        display: block;
+        max-height: 0;
+        opacity: 0;
+        -webkit-transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        overflow: hidden;
+        
+        
     }
 
     #menu ul li{
         float: none;
-        border-left: 5px solid;
+        border-left-width: 5px;
+        border-left-style: solid;
         border-top: none;
         width: auto;
         text-decoration: none;
@@ -58,14 +65,9 @@
     }
 
     #menu #hamburger:checked ~ ul{
-        display: block;
-        position: absolute;
-        background-color: #f9f9f9;
+        max-height: 20em;
+        opacity: 1;
         
-    }
-
-    #menu #hamburger:checked ~ ul li{
-        display: block;
     }
 
     #news article header a {

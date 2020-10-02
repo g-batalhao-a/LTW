@@ -1,0 +1,79 @@
+#news #comments h1{
+    padding: 0;
+    padding-left: 1em;
+    color: black;
+}
+
+#news #comments .comment{
+    display: flexbox;
+}
+
+#news #comments .comment .user{
+    padding: 0;
+    padding-left: 1em;
+    color: rgb(0, 0, 0);
+    font-style: oblique;
+    font-weight: bold;
+}
+#news #comments .comment .user::after{
+    font-style: normal;
+    font-weight: normal;
+    content: " said:";
+}
+
+#news #comments .comment .date{
+    padding: 0;
+    padding-right: 1em;
+    color: black;
+    font-weight: bold;
+    text-align: right;
+    position: absolute;
+    right: 0em;
+}
+
+#news #comments .comment p{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    padding-right: 1em;
+    background-color: #f0f0f0 ;
+    background-position: 1em;
+}
+#news #comments .comment p::before{
+    content: '\201C ' ;
+    color: gray;
+    font-size: xx-large;
+}
+#news #comments .comment p::after{
+    content: '\201C ' ;
+    color: grey;
+    font-size: x-large;
+}
+
+#news  #comments .comment :first-of-type::first-letter {
+    font-size: medium;
+}
+
+form {
+    background-color: #f0f0f0 ;
+    margin: 0.5rem;
+    padding: 0;
+}
+
+form h2 {
+    font-size: medium;
+}
+
+form input {
+    background-color: #f0f0f0;
+}
+
+form textarea {
+    width: 100%;
+}
+
+form input[type=submit] {
+    background-color: #2A2F33;
+    padding: 1em;
+    color: white;
+    border: none;
+}
