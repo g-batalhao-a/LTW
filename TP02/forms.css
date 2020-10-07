@@ -1,55 +1,81 @@
-#register {
-    position: relative;
-    display: block;
+body {
+    grid-template-rows: auto auto 1fr 4em;
 }
 
-#register h1 {
+#menu {
+    height: fit-content;
+}
+
+#register, #login {
+    position: relative;
+}
+
+#register h1, #login h1 {
     text-align: center;
-    position: relative;
-    padding: 0;
-    margin: 0;
-    top:-12em;
 }
 
-#register form {
-    background-color: white ;
-    position: absolute;
-    top: -15em;
-    left:15em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
+#register form, #login form {
+    position: relative;
+    background-color: white;
+    max-width: 18em;
+    margin: auto;
     padding: 2em;
 }
 
-#register form label{
-    text-align: left;
-    align-items: left;
-}
-
-#register form input[type=text], input[type=email], input[type=password]{
+#register form *, #login form * {
     width: 100%;
-    border: none;
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    box-sizing:border-box;
-    background-color: white;
-    border-bottom: 1px solid black;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    padding: 0;
-    
+    margin: 0.7em 0em 1em 0em;
+    font-size: 1.1em;
 }
 
-form input[type=submit] {
-    background-color: #2A2F33;
-    padding: 1em;
-    color: white;
+#register form label input, #login form label input {
     border: none;
-    align-self: flex-end;
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+
+#register form input[type="submit"], #login form input[type="submit"] {
+    font-size: 0.9em;
+    background-color: black;
+    color: white;
+    padding: 1em;
+    width: fit-content;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+@media screen and (max-width: 60em) {
+    body {
+        width: 100%;
+        grid-template-columns: [col1] auto;
+        grid-template-rows: auto;
+    }
+    #register, #login {
+        grid-column-start: col1;
+    }
+    
 }
 
 @media screen and (max-width: 30em) {
-    
+    #register h1, #login h1 {
+        background-color: white;
+        margin: 0;
+        padding: 1em;
+    }
+
+    #register form, #login form {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    body > footer {
+        margin: 0;
+    }
 }

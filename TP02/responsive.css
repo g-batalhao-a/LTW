@@ -8,7 +8,7 @@
     }
     #news, body > footer {
         margin-right: 0;
-        
+        width: 100vw;
     }
 }
 
