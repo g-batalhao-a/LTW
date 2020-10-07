@@ -1,0 +1,45 @@
+body {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 25% 50% 25%;
+    grid-template-areas: "green green green"
+                        "yellow red blue"
+                        "yellow red blue"
+                        "orange orange blue";
+}
+
+#green {
+    grid-area: green;
+}
+
+#orange {
+    grid-area: orange;
+}
+
+#yellow {
+    grid-area: yellow;
+}
+
+#red {
+    grid-area: red;
+}
+
+#blue {
+    grid-area: blue;
+    
+}
+
+#yellow ul, #red ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#yellow ul li, #red ul li {
+    width: 15%;
+}
+
+#red ul {
+    display: flex;
+}
+  
