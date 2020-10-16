@@ -18,5 +18,12 @@
         return $stmt->fetch();;
     }
 
+    function updateArticle(int $id, string $title, string $introduction, string $fulltext) {
+        global $db;
+        $stmt = $db->prepare('UPDATE news SET title= ?, introduction=?, fulltext=? WHERE id = ?');
+        $stmt->execute(array($title,$introduction,$fulltext,$id)); 
+        
+    }
+
     
 ?>
