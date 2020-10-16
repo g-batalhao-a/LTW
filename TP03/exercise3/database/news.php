@@ -25,5 +25,21 @@
         
     }
 
+    function addArticle(string $title,string $tags, string $username, string $introduction,string $fulltext) {
+        global $db;
+        $time=time();
+        $stmt = $db->prepare('INSERT INTO news (id,title,published,tags,username,introduction,fulltext) 
+                                VALUES (?,?,?,?,?,?,?)');
+        $stmt->execute(array(NULL,$title,$time,$tags,$username,$introduction,$fulltext)); 
+        
+    }
+
+    function deleteArticle(int $id) {
+        global $db;
+        $stmt = $db->prepare('DELETE FROM news WHERE id = ?');
+        $stmt->execute(array($id));
+        
+    }
+
     
 ?>

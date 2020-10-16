@@ -4,7 +4,7 @@
       <article>
         <header>
         <h1>
-        <?php if (array_key_exists('username',$_SESSION) && !empty($_SESSION['username'])) {?>
+        <?php if (array_key_exists('username',$_SESSION) && !empty($_SESSION['username']) && $article['username']==$_SESSION['username']) {?>
           <a href="edit_news.php?id=<?= $article['id']?>"><?= $article['title']?></a>
         <?php } else {?>
           <a href="news_item.php?id=<?= $article['id']?>"><?= $article['title']?></a>
@@ -47,7 +47,15 @@
           </span>
           <span class="date"><?= date(DATE_RSS, $article['published'])?></span>
           <a class="comments" href="news_item.php?id=<?= $article['id']?>"><?= count($comments)?></a>
+         
         </footer>
+        
+        <?php if (array_key_exists('username',$_SESSION) && !empty($_SESSION['username']) && $article['username']==$_SESSION['username']) {?>
+          <section id="delete">
+          <a class="delete" href="delete_news.php?id=<?= $article['id']?>">DELETE</a>
+          </section> 
+          <?php } ?>
+        
       </article>
     </section>
 </html>

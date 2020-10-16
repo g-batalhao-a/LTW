@@ -60,6 +60,17 @@
   #comments form h2 {
     font-size: 1em;
   }
+  #delete {
+    padding: 1em;
+    text-align: center;
+    background-color: red;
+    background-position: auto;
+  }
+
+  #delete > a{
+    color: white;
+    text-decoration: none;
+  }
    
 /*
 #news #comments h1{
