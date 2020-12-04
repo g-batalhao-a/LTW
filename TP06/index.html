@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Regular Expressions</title>
+    <script src="main.js" defer></script>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form action="myscript.php">
+      Username: <input type="text" pattern="^[a-zA-Z]\w{3,8}[a-zA-Z]$" name="username" required="required"/>
+      Real name: <input type="text" pattern="^[^0-9\\|!&quot;@#£$§%&/()=?{[\]}'«»*+]*$" name="realname" required="required"/>
+      ZIP: <input type="text" pattern="(^[0-9]{4}-[0-9]{3})|(^[0-9]{4})" name="zip" required="required"/>
+      IPv4 address: <input type="text" pattern="^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$" name="ipv" required="required"/>
+      MAC address: <input type="text" pattern="^((([A-F][0-9]:){5})|(([A-F][0-9]-){5}))([A-F][0-9])$" name="mac" required="required"/>
+      password: <input type="text" pattern="^(?=(.*\d){2})(?=(.*[;.:]){2})(\w|[;.:])(\w|[;.:]){4,}(?!\1)(\w|[;.:])$" name="password" required="required"/>
+      <br/>
+      <input type="submit" value="Try"/>
+    </form>
+  </body>
+</html>
+
